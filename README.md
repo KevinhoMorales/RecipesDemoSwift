@@ -13,6 +13,6 @@ La aplicación está desarrollada con Swift en Xcode. Se usó la web [https://ww
 ### Pruebas automatizadas
 - Se realizó pruebas automatizadas con XCTest en el cual se pudo probar el servicio creado y un título de una vista
 ### Novedades de la plataforma
-- Esta aplicación tiene un diseño minimalista y se agregó la sección “Recetas populares para ti” la cual está implementada con un ** COLLECTIONVIEW **
+- Esta aplicación tiene un diseño minimalista y se agregó la sección “Recetas populares para ti” la cual está implementada con un **COLLECTIONVIEW**
 ### Librerías externas
 - Se implemento las librerías con Swift Package Manager y la única que se usó de terceros es [Kingfisher](https://github.com/onevcat/Kingfisher)
