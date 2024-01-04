@@ -31,13 +31,15 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
     
     func retrieveRecipes(completion: @escaping(([Recipe]) -> Void)) {
+        view.showLoading()
         let recipesRequest = RecipesRequest()
         let model = RecipesModel()
-        recipesRequest.get(model: model) { result in
+        recipesRequest.get(model: model) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
                     completion(response.recipes)
+                    self?.view.hideLoading()
                 case .failure(let error):
                     print(error)
                 }

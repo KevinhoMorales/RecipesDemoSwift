@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="RecipesDemoSwift" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="zgV-3M-cWc" id="79e-I0-18y"/>
+                <outlet property="searchBar" destination="U5T-Ja-EqC" id="Jdr-cW-gxc"/>
                 <outlet property="tableView" destination="DCa-R5-AxK" id="VcF-Yp-kNQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -37,7 +39,7 @@
                         <outlet property="delegate" destination="-1" id="1W6-Lj-MHf"/>
                     </connections>
                 </searchBar>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Las más buscadas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-1h-rnU">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recetas populares para ti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-1h-rnU">
                     <rect key="frame" x="16" y="110" width="343" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="htG-nT-5a6"/>
@@ -52,12 +54,16 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="Qv4-Xu-QqZ"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vHL-1m-Mxt">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vHL-1m-Mxt">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="cHO-kV-lvE"/>
+                        <outlet property="delegate" destination="-1" id="q0c-8Z-ip8"/>
+                    </connections>
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

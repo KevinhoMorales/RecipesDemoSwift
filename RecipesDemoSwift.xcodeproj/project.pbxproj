@@ -40,6 +40,10 @@
 		2AA33A662B4654F800682802 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA33A652B4654F800682802 /* HomeTests.swift */; };
 		2AA33A672B46564300682802 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA33A4F2B46407700682802 /* Request.swift */; };
 		2AA33A682B46565300682802 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98BCBB2B43B45F004249DA /* Constants.swift */; };
+		2AA33A6B2B46597F00682802 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA33A6A2B46597F00682802 /* IQKeyboardManagerSwift */; };
+		2AA33A6D2B465B5E00682802 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA33A6C2B465B5E00682802 /* Loading.swift */; };
+		2AA33A702B465E8D00682802 /* RockStarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA33A6E2B465E8D00682802 /* RockStarCollectionViewCell.swift */; };
+		2AA33A712B465E8D00682802 /* RockStarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AA33A6F2B465E8D00682802 /* RockStarCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,9 @@
 		2AA33A5D2B464EBA00682802 /* RecipeMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeMapViewController.xib; sourceTree = "<group>"; };
 		2AA33A602B464ECA00682802 /* RecipeMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMapViewModel.swift; sourceTree = "<group>"; };
 		2AA33A652B4654F800682802 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		2AA33A6C2B465B5E00682802 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		2AA33A6E2B465E8D00682802 /* RockStarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockStarCollectionViewCell.swift; sourceTree = "<group>"; };
+		2AA33A6F2B465E8D00682802 /* RockStarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RockStarCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA33A532B4646F300682802 /* Kingfisher in Frameworks */,
+				2AA33A6B2B46597F00682802 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				2AA33A552B46470600682802 /* Extension */,
+				2AA33A6C2B465B5E00682802 /* Loading.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,6 +327,8 @@
 		2AA33A582B464CDE00682802 /* RockStarCell */ = {
 			isa = PBXGroup;
 			children = (
+				2AA33A6E2B465E8D00682802 /* RockStarCollectionViewCell.swift */,
+				2AA33A6F2B465E8D00682802 /* RockStarCollectionViewCell.xib */,
 			);
 			path = RockStarCell;
 			sourceTree = "<group>";
@@ -366,6 +377,7 @@
 			name = RecipesDemoSwift;
 			packageProductDependencies = (
 				2AA33A522B4646F300682802 /* Kingfisher */,
+				2AA33A6A2B46597F00682802 /* IQKeyboardManagerSwift */,
 			);
 			productName = RecipesDemoSwift;
 			productReference = 2A08A5FD2B075914003CBCEC /* RecipesDemoSwift.app */;
@@ -441,6 +453,7 @@
 			mainGroup = 2A08A5F42B075914003CBCEC;
 			packageReferences = (
 				2AA33A512B4646F300682802 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2AA33A692B46597F00682802 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 2A08A5FE2B075914003CBCEC /* Products */;
 			projectDirPath = "";
@@ -459,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A08A60D2B075917003CBCEC /* LaunchScreen.storyboard in Resources */,
+				2AA33A712B465E8D00682802 /* RockStarCollectionViewCell.xib in Resources */,
 				2A08A60A2B075917003CBCEC /* Assets.xcassets in Resources */,
 				2AA33A462B463B6B00682802 /* DetailViewController.xib in Resources */,
 				2AA33A5F2B464EBA00682802 /* RecipeMapViewController.xib in Resources */,
@@ -498,6 +512,8 @@
 				2A98BCC82B43B57C004249DA /* HomeViewModel.swift in Sources */,
 				2A98BCC12B43B50D004249DA /* Coordinator.swift in Sources */,
 				2AA33A4C2B463C8C00682802 /* RecipesRequest.swift in Sources */,
+				2AA33A6D2B465B5E00682802 /* Loading.swift in Sources */,
+				2AA33A702B465E8D00682802 /* RockStarCollectionViewCell.swift in Sources */,
 				2A08A6012B075914003CBCEC /* AppDelegate.swift in Sources */,
 				2A98BCBF2B43B502004249DA /* MainCoordinator.swift in Sources */,
 				2AA33A612B464ECA00682802 /* RecipeMapViewModel.swift in Sources */,
@@ -859,6 +875,14 @@
 				minimumVersion = 7.10.1;
 			};
 		};
+		2AA33A692B46597F00682802 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -866,6 +890,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2AA33A512B4646F300682802 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		2AA33A6A2B46597F00682802 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AA33A692B46597F00682802 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
