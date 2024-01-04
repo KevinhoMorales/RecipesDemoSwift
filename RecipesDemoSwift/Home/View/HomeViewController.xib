@@ -39,7 +39,7 @@
                         <outlet property="delegate" destination="-1" id="1W6-Lj-MHf"/>
                     </connections>
                 </searchBar>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recetas populares para ti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-1h-rnU">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populares para ti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-1h-rnU">
                     <rect key="frame" x="16" y="110" width="343" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="htG-nT-5a6"/>

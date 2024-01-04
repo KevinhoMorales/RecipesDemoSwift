@@ -23,7 +23,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
     
     func getTitle() -> String {
-        "Recipes"
+        "Recetas"
     }
 
     func getRecipes() -> [Recipe] {

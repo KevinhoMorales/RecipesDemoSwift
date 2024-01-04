@@ -87,13 +87,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let viewModel else { return 0 }
-        return viewModel.getRecipes().count
+        let recipes = Array(viewModel.getRecipes().suffix(4))
+        return recipes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let viewModel else { return UICollectionViewCell() }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RockStarCollectionViewCell.CELL_ID, for: indexPath) as! RockStarCollectionViewCell
-        let recipe = viewModel.getRecipes()[indexPath.row]
+        let recipes = Array(viewModel.getRecipes().suffix(4))
+        let recipe = recipes[indexPath.row]
         cell.setUp(recipe: recipe)
         return cell
     }
@@ -101,14 +103,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let viewModel else { return }
         tapHaptic()
-        let recipe = viewModel.getRecipes()[indexPath.row]
+        let recipes = Array(viewModel.getRecipes().suffix(4))
+        let recipe = recipes[indexPath.row]
         coordinator?.detalView(recipe: recipe)
     }
 }
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard var viewModel else { return }
+        guard let viewModel else { return }
         if searchText.isEmpty {
             viewModel.retrieveRecipes { [weak self] recipes in
                 self?.reloadDataBySearch(recipes: recipes)
@@ -117,7 +120,7 @@ extension HomeViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard var viewModel else { return }
+        guard let viewModel else { return }
         guard let searchText = searchBar.text else { return }
         let recipes = viewModel.recipes.filter { $0.name.contains(searchText) }
         searchBar.endEditing(true)

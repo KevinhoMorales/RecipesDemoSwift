@@ -7,7 +7,6 @@
 
 import UIKit
 import Kingfisher
-import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setUpLibraries() {
-        IQKeyboardManager.shared.enable = true
         ImageCache.default.clearCache()
     }
     
